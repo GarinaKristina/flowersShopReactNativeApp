@@ -7,6 +7,7 @@ import {
   Image,
   TouchableOpacity,
 } from "react-native";
+import flowers from "../assets/flowers.png";
 
 export default function MainPage() {
   const textAfterPressButton = () => Alert.prompt("Here we go.....");
@@ -29,10 +30,7 @@ export default function MainPage() {
       >
         <Text style={styles.buttonText}>Catalog</Text>
       </TouchableOpacity>
-      <Image
-        style={styles.mainPicture}
-        source={require("./assets/flowers.png")}
-      />
+      <Image source={flowers} style={styles.mainPicture} />
       <StatusBar style="auto" />
     </View>
   );
@@ -40,7 +38,7 @@ export default function MainPage() {
 
 const styles = StyleSheet.create({
   container: {
-    flex: 1,
+    flex: 2,
     alignItems: "center",
     justifyContent: "center",
   },
@@ -86,9 +84,9 @@ const styles = StyleSheet.create({
     textShadowRadius: 2,
   },
   mainPicture: {
-    flex: 1,
-    width: "100%",
-    height: "100%",
+    // flex: 1,
+    // width: "100%",
+    // height: "100%",
     resizeMode: "cover",
   },
   buttonStyle: {

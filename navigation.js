@@ -1,7 +1,7 @@
 import React from "react";
-
-import { createStackNavigator } from "@react-navigation/native";
-import { NavigationContainer } from "@react-navigation/stack";
+import MainPage from "./components/MainPage";
+import { createStackNavigator } from "@react-navigation/stack";
+import { NavigationContainer } from "@react-navigation/native";
 
 const Stack = createStackNavigator();
 
@@ -11,7 +11,7 @@ export default function Navigate() {
       <Stack.Navigator>
         <Stack.Screen
           name="Main"
-          component={Main}
+          component={MainPage}
           options={{ title: "Main Page" }}
         />
       </Stack.Navigator>

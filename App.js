@@ -1,6 +1,6 @@
 import React from "react";
-import MainPage from "./components/MainPage";
+import MainStack from "./navigation";
 
 export default function App() {
-  return <MainPage />;
+  return <MainStack />;
 }

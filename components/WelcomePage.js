@@ -9,8 +9,10 @@ import {
 } from "react-native";
 import flowers from "../assets/flowers.png";
 
-export default function MainPage() {
-  const textAfterPressButton = () => Alert.prompt("Here we go.....");
+export default function WelcomePage({ navigation }) {
+  const loadScene = () => {
+    navigation.navigate("Catalog");
+  };
   return (
     <View style={styles.container}>
       <Text numberOfLines={1} style={styles.welcomeText}>
@@ -24,10 +26,7 @@ export default function MainPage() {
         {" "}
         Our location: The Republic of Love,{"\n"}the street of impressions,14
       </Text>
-      <TouchableOpacity
-        style={styles.buttonStyle}
-        onPress={textAfterPressButton}
-      >
+      <TouchableOpacity style={styles.buttonStyle} onPress={loadScene}>
         <Text style={styles.buttonText}>Catalog</Text>
       </TouchableOpacity>
       <Image source={flowers} style={styles.mainPicture} />
@@ -84,7 +83,7 @@ const styles = StyleSheet.create({
     textShadowRadius: 2,
   },
   mainPicture: {
-    // flex: 1,
+    flex: 1,
     // width: "100%",
     // height: "100%",
     resizeMode: "cover",
